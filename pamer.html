@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pamer dong</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: black;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            min-width: 50vh;
+        }
+        .box
+        {
+            background-image: linear-gradient(365deg,rgba(199, 224, 236, 0.879),rgb(137, 30, 244),rgba(208, 88, 245, 0.879));
+            width: 300px;
+            height: 400px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .box::before
+        {
+            content:'';
+            width: 300px;
+            height: 400px;
+            display: flex;
+            top:-50%;
+            left:-50%;
+            line-height: 100vh;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            transform-origin:bottom right;
+            background-image:linear-gradient(transparent,aquamarine,aquamarine) ;
+            animation:run 6s linear infinite;
+        }
+        .box::after
+        {
+            content:'';
+            width: 300px;
+            height: 400px;
+            display: flex;
+            top:-50%;
+            left:-50%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            transform-origin:bottom right ;
+            background-image:linear-gradient(transparent,aquamarine,aquamarine) ;
+            animation:run 6s linear infinite;
+            animation-delay: -3s;
+        }
+        @keyframes run
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .box2
+        {
+            width: 295px;
+            height: 395px;
+            z-index: 10;
+            inset: 2px;
+            position:absolute;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: black;
+            border-radius: 8px;
+            
+        }
+        .box2 span:nth-child(1)
+        {
+            width: 45px;
+            height: 80px;
+            border-top: 8px solid blue;
+            border-radius: 50%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .box2 span:nth-child(2)
+        {
+            width: 35px;
+            height: 80px;
+            transform: rotate(90deg);
+           
+            border-bottom: 8px solid red;
+            border-radius: 50%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .box2 span:nth-child(3)
+        {
+            width: 35px;
+            height: 80px;
+            transform: rotate(-90deg);
+            
+            border-bottom: 8px solid greenyellow;
+            border-radius: 50%;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .box2 span:nth-child(4)
+        {
+            width: 35px;
+            height: 80px;
+            color: grey;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>blackhat</span>
+        </div>
+    </div>
+</body>
+</html>
